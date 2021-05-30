@@ -33,6 +33,8 @@ divHTML.append(spanBye);
 console.log(spanHi.id);
 console.log(spanHi.title);
 
+spanHi.removeAttribute("id");
+
 //this changes the title of the spanHi tag from "hi" to "sayHello"
 spanHi.setAttribute("title", "sayHello");
 console.log(spanHi.title);
@@ -40,3 +42,21 @@ console.log(spanHi.title);
 //changing title back to the original
 spanHi.title = "hello";
 console.log(spanHi.title);
+
+//this logs the data-test tag from the html doc
+console.log(spanHi.dataset);
+console.log(spanHi.dataset.test);
+console.log(spanHi.dataset.anotherTest);
+
+//set a new data attribute with js
+spanHi.dataset.newName = "hi";
+
+spanHi.classList.add("newClass");
+
+spanHi.classList.remove("hi1");
+
+//Does the opposite of what the currently does. Removes if visible, or adds if not present.
+spanHi.classList.toggle("hi3");
+
+//How to set style with JS
+divHTML.style.backgroundColor = "#fff";
